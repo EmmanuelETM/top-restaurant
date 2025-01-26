@@ -32,6 +32,45 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
+    background-color: beige;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-button {
+    padding: 1rem;
+    font-size: 1.8rem;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    color: #333;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.nav-button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; 
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.nav-button:hover::after {
+    width: 100%; 
+}
+
+.nav-button:hover {
+    color: #555;
 }
 
 div#content {
@@ -47,5 +86,16 @@ div#content {
 }
 
 .container {
-
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px; 
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
 }
+
