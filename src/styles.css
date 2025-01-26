@@ -26,9 +26,26 @@ html, body {
     height: 100vh;
 }
 
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
+}
+
+div#content {
+    flex: 1;
+    background-image: url('./img/pasta-bg.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+}
+
+.container {
+
 }
