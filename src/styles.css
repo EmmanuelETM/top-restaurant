@@ -73,7 +73,12 @@ nav {
     color: #555;
 }
 
-div#content {
+footer {
+    text-align: center;
+    background-color: beige;
+}
+
+#content {
     flex: 1;
     background-image: url('./img/pasta-bg.png');
     background-size: cover; 
@@ -98,4 +103,5 @@ div#content {
     gap: 2rem;
     text-align: center;
 }
+
 
