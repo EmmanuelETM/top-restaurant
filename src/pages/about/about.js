@@ -1,4 +1,4 @@
-import "./about.css"
+import "./about.css";
 
 const createAbout = function() {
 
@@ -11,6 +11,8 @@ const createAbout = function() {
     }
 
     const aboutContainer = document.createElement('div');
+    aboutContainer.classList.add('about-container');
+
     const scheduleContainer = document.createElement("div");
     const scheduleHeader = document.createElement("h3");
     const scheduleText = [

@@ -8,7 +8,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px white solid; */
 }
 
 html, body {
@@ -21,11 +20,17 @@ html, body {
     font-style: normal;
     font-size: 2rem;
     color: black;
-    /* background-color: rgb(17 24 39); */
     overflow: auto;
     height: 100vh;
 }
 
+body {
+    background-image: url('./img/pasta-bg.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease, background-size 0.5s ease, background-position 0.5s ease;
+}
 
 header {
     display: flex;
@@ -45,13 +50,13 @@ nav {
 .nav-button {
     padding: 1rem;
     font-size: 1.8rem;
+    font-weight: 700;
     background-color: transparent;
     border: none;
     position: relative;
     cursor: pointer;
     color: #333;
     outline: none;
-    transition: color 0.3s ease;
 }
 
 .nav-button::after {
@@ -73,6 +78,11 @@ nav {
     color: #555;
 }
 
+.nav-button.active::after {
+    width: 100%;
+}
+
+
 footer {
     text-align: center;
     background-color: beige;
@@ -80,28 +90,11 @@ footer {
 
 #content {
     flex: 1;
-    background-image: url('./img/pasta-bg.png');
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10rem;
 }
 
-.container {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 600px; 
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    align-items: center;
-    gap: 2rem;
-    text-align: center;
-}
 
 

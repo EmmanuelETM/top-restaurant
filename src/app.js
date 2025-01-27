@@ -5,16 +5,26 @@ import { About } from "./pages/about/about.js";
 
 const loadContent = (function() {
 
-    const container = document.querySelector(".container");
+    const container = document.querySelector("#content");
     const homeButton = document.querySelector('.home');
     const menuButton = document.querySelector('.menu');
     const aboutButton = document.querySelector('.about');
+    const navButtons = document.querySelectorAll('.nav-button');
 
     const clearContainer = function(container) {
         container.innerText = " ";
     }
     
     const handleButtons = function () {
+
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+
+
         homeButton.addEventListener('click', () => {
             clearContainer(container);
             Home(container);
@@ -35,7 +45,7 @@ const loadContent = (function() {
 
     const init = function () {
         clearContainer(container);
-        About(container);
+        Home(container);
     }
 
     return { init }
